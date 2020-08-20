@@ -22,7 +22,7 @@
                     <b-button class="mt-2" variant="outline-warning" block @click="toggleModal">Close</b-button>
             </b-modal>
 
-             <b-modal id="modal-edit" ref="my-modal-edit" hide-footer title="Permission">
+             <b-modal id="modal-edit" ref="my-modal-edit" hide-footer title="Edit Permission">
                <div>
                    <b-form >
             <b-form-group
@@ -79,7 +79,22 @@ export default {
     name:"Permission",
     data(){
         return{
-            fields: ['id', 'employeeName', 'lastNameEmployee','permitDate','permissionTypeDescripcion','actions'],
+            fields: [
+              {
+                key:'id',
+                label:'id'
+                }, {
+                  key:'employeeName',
+                  label:'first Name'
+                  }, {
+                    key:'lastNameEmployee',
+                    label:'last Name'
+                  },{
+                    key:'permitDate',
+                    label:'Date'},
+                    {key:'permissionTypeDescripcion',
+                    label:'Description'},
+                    'actions'],
             permissions:[],
             permissonId:0,
             message:"",
