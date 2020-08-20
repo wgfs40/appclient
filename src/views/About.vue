@@ -79,7 +79,7 @@ export default {
     name:"Permission",
     data(){
         return{
-            fields: ['id', 'employeeName', 'lastNameEmployee','permitDate','actions'],
+            fields: ['id', 'employeeName', 'lastNameEmployee','permitDate','permissionTypeDescripcion','actions'],
             permissions:[],
             permissonId:0,
             message:"",
@@ -124,6 +124,7 @@ export default {
                     item.employeeName = element.employeeName;
                     item.lastNameEmployee = element.lastNameEmployee;
                     item.permissionTypeId = element.permissionTypeId;
+                    item.permissionTypeDescripcion = element.permissionTypeDescripcion
                     item.permitDate = element.permitDate;
                     this.permissions.push(item);
                 });
